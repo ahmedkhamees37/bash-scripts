@@ -1,0 +1,782 @@
+sudo cat /etc/shadow
+sudo shutdown now
+sudo hostnamectl set-hostname sa
+ip a
+sudo nmcli c s
+sudo nmccon up enp0s43
+sudo nmccon up enp0s3
+sudo nmcli con up enp0s3
+ip a
+ls -l
+clear
+mkdir day1
+cd day1/
+vi sc1.sh
+chmod a+x sc1.sh 
+./sc1.sh
+./sc1.sh 1234 5678
+vi sc1.sh 
+clear
+./sc1.sh 
+./sc1.sh  1234
+./sc1.sh  1234 23456
+./sc1.sh  "1234 23456"
+clear
+cat /etc/shadow >/dev/null 2>&1
+echo ${?}
+cat /etc/sha >/dev/null 2>&1
+echo ${?}
+fg
+./sc1.sh 123 123
+f
+vi sc1.sh 
+fg
+./sc1.sh 123 123
+fg
+clear
+echo "1234" | grep -c "[0-9]*"
+echo "1234a" | grep -c "[0-9]*"
+echo "1234" | grep -c "^[0-9]*$"
+echo "12a34" | grep -c "^[0-9]*$"
+echo "1234a" | grep -c "^[0-9]*$"
+echo "a1234" | grep -c "^[0-9]*$"
+echo "12a34" | grep -c "[0-9]*"
+echo "12a34" | grep -c "^[0-9]*$"
+echo "1234" | grep -c "^[0-9]*$"
+fg
+clear
+./sc1.sh 123 123
+echo ${?}
+fg
+./sc1.sh 123 123
+echo ${?}
+fg
+clear
+./sc1.sh 111 111
+echo ${?}
+fg
+clear
+./sc1.sh 111 111
+./sc1.sh 111 2345
+fg
+clear
+./sc1.sh 111 2345
+./sc1.sh "111 2345"
+clear
+seq 1 10
+seq 1 10 2
+seq 1 2 10 
+seq a z
+seq -h
+seq --help
+clear
+seq -s : 1 10 
+seq  1 10 
+clear
+[ 1 -eq 1 ]
+echo ${?}
+[ 1 -eq 0 ]
+echo ${?}
+N1=1
+[ ${N1} -eq 2 ]
+echo ${?}
+[ ${N1} -eq ${N2} ]
+[ ${N1} -eq 2]
+[ ${N1} -eq 2 2 ]
+[ ${N1} == "2 2" ]
+echo ${?}
+vi sc2.sh
+clear
+chmod a+x sc2.sh 
+./sc2.sh 
+echo ${?}
+./sc2.sh 123
+echo ${?} 
+./sc2.sh 123 123
+echo ${?} 
+fg
+vi sc2.sh 
+clear
+fgA
+./sc2.sh 123 123
+./sc2.sh 123 hugh
+echo ${?}
+./sc2.sh asdsad 123 
+echo ${?}
+fg
+clear
+./sc2.sh 
+echo ${?}
+./sc2.sh asjdasd 123123
+echo ${?}
+./sc2.sh 123123 asdasd
+echo ${?}
+./sc2.sh 123123 3333
+cler
+clear
+[ -f /etc/koko ]
+echo ${?}
+[ -f /etc/passwd ]
+echo ${?}
+[ -r /etc/shadow ]
+echo ${?}
+[ ${NAME} == "ahmed" ]
+man test
+touch iti
+ls -l iti 
+clerar
+clear
+[ -n ${NEWNAME} ]
+echo ${?{
+echo ${?}
+[ -n ${NEWNAME} ]
+echo ${?}
+man test
+[ -z ${NEWNAME} ]
+echo ${?}
+echo ${NEWNAME}
+man test
+echo ${NEWNAME} | wc -c
+echo "Result = $(expr 1 + 2)"
+expr 3 * 4
+expr 3 + 4
+clear
+expr 3 * 4
+cat sc1.sh 
+cat sc2.sh 
+expr 3 * 4
+ls -l
+clear
+expr 3 \* 4
+expr 4 / 2
+expr 5 % 2
+expr 5 / 2
+clear
+$[1+2]
+echo $[1+2]
+echo $[1+2*3]
+N1=1
+N2=2
+expr ${N1} + ${N2}
+echo $[N1+N2]
+ls -l
+ls -l| wc -l
+clear
+ls -l| sed '1d'
+man sed
+clear
+sed -n "/bash/p" sc1.sh 
+cat /etc/hosts
+cat /etc/groups
+cat /etc/group
+sed -n "4,7p" /etc/group
+clear
+sed -n "/bash/p" sc1.sh 
+sed -n "4,7p" /etc/group
+sed  "4,7d" /etc/group
+clear
+cat sc2.sh 
+clear
+cat sc2.sh | sed 's/parameter/PARAMETER/g'
+clear
+#sed -i 's/parameter/PARAMETER/g' sc2.sh 
+cp sc2.sh sc2.sh.back
+cat sc2.sh | sed 's/parameter/PARAMETER/g' > sc2.sh
+cat sc2.sh
+cp sc2.sh.back sc2.sh
+cat sc2.sh
+clear
+cat sc2.sh | sed 's/parameter/PARAMETER/g' > sc2.sh-tmp
+cat sc2.sh-tmp 
+clear
+cat sc2.sh
+cat sc2.sh | sed '1 i helloworld"
+cat sc2.sh | sed '1 i helloworld'
+clear
+sed -i
+clear
+sed -i '1d' sc2.sh
+cat sc2.sh
+vi sc2.sh
+fg
+vi data
+cat /etc/passwd
+cat /etc/passwd| sed 's/:/ /g'
+cat /etc/passwd| sed 's/:/ /g' > passwdata
+#cat passwdata | awk ' { print $1 } '
+clear
+cat passwdata | awk ' { print $1 } '
+cat passwdata | awk ' { print $2 } '
+cat passwdata | awk ' { print $3 } '
+clear
+cat passwdata | awk ' { print $5" "$3 } '
+clear
+cat passwdata | awk ' { print $5" "$3 } '| sed 's/root/r00t/g
+cat passwdata | awk ' { print $5" "$3 } '| sed 's/root/r00t/g'
+ vi data.csv
+cat data.csv 
+cat data.csv | awk ' { print $1","$2" }'
+cat data.csv | awk ' { print $1" "$2" } '
+cat data.csv | awk ' { print $1" "$2 } '
+clear
+cat data.csv | awk ' BEGIN { print "Start" } { print $1" "$2 } '
+cat data.csv | awk ' BEGIN { print "Start" } { print $1" "$2 } END { print "Ended" '
+cat data.csv | awk ' BEGIN { print "Start" } { print $1" "$2 } END { print "Ended" } '
+clear
+cat data.csv | awk ' BEGIN { FS=, } { print $1" "$2 } END { print "Ended" } '
+cat data.csv | awk ' BEGIN { FS="," } { print $1" "$2 } END { print "Ended" } '
+cat data.csv | awk ' BEGIN { FS="," } { print $1","$2 } END { print "Ended" } '
+clear
+sudo cat /etc/passwd > /etc/koko
+N1=1
+N2=2
+[ ${N1} > ${N2} ]
+echo ${?{
+[ ${N1} > ${N2} ]
+echo ${?}
+[ ${N1} -gt ${N2} ]
+echo ${?}
+[ 2 > 1 ]
+echo ${?}
+[ 1 > 2 ]
+echo ${?}
+cat data.csv | awk ' BEGIN { FS="," } { print $3 } END { print "Ended" } '
+cat data.csv | awk ' BEGIN { FS=",";OS=" " } { print $3 } END { print "Ended" } '
+cat data.csv | awk ' BEGIN { FS=",";ORS=" " } { print $3 } END { print "Ended" } '
+clear
+cat data.csv | awk ' BEGIN { FS="," } { print $3 } END { print "Ended" } '
+cat data.csv | awk ' BEGIN { FS="," } { print $3 }'
+cat data.csv | sed 1d | awk ' BEGIN { FS="," } { print $3 }'
+cat data.csv | sed 1d | awk ' BEGIN { FS=",",ORS=" " } { print $3 }'
+cat data.csv | sed 1d | awk ' BEGIN { FS=",";ORS=" " } { print $3 }'
+cat data.csv | sed 1d | awk ' BEGIN { FS=",";ORS=" " } { print $3 } END { print "Total records " NR " '
+cat data.csv | sed 1d | awk ' BEGIN { FS=",";ORS=" " } { print $3 } END { print "Total records " NR } '
+cat data.csv | sed 1d | awk ' BEGIN { FS="," } { print $3 } END { print "Total records " NR } '
+vi data.csv 
+cat data.csv | sed 1d | awk ' BEGIN { FS="," } { print $3;SUM=SUM+$4 } END { print "Total records " NR; print "Salary = "SUM } '
+vi proc.awk
+cat data.csv | sed 1d | awk -f proc.awk 
+cat data.csv 
+cat data.csv | sed 1d
+cat proc.awk 
+clear
+vi proc.awk 
+which awk
+fg
+chmod a+x proc.awk 
+cat data.csv | sed 1d | ./proc.awk 
+vi proc.awk 
+cat data.csv | sed 1d | awk -f proc.awk 
+cler
+clear
+cat proc.awk 
+clear
+VAL=$(cat data.csv)
+echo ${VAL}
+cat data.csv 
+echo "${VAL}"
+echo "test"
+echo -n "test"
+echo "test\tagain"
+clear
+echo "test\tagain"
+echo -e "test\tagain"
+read VAR1
+echo ${VAR1}
+read -s VAR1
+echo ${VAR1}
+read VAR2
+echo ${VAR2}
+clear
+ls -
+ls -l
+more ~/.bash_history 
+cat ~/.bash_history 
+cp ~/.bash_history day1/history
+ip a
+sudo vi /etc/rsyslog.d/test.conf
+ls -l /var/log/
+sydo systemctl restart rsyslogd
+sudo systemctl restart rsyslogd
+sudo systemctl restart rsyslog
+logger -p local7.info "hello"
+sudo cat /var/log/iti 
+sudo rm /etc/rsyslog.d/*
+sudo systemctl resart rsyslog
+sudo systemctl restart rsyslog
+clear
+uptime
+man uptime
+uptime
+uptime | awk 
+uptime | awk ' { print $8 }'
+uptime | awk ' { print $9 }'
+uptime | awk ' { print $10 }'
+uptime | awk ' { print $10 }' | sed 's/,//h'
+uptime | awk ' { print $10 }' | sed 's/,//g'
+clear
+uptime | awk ' { print $10 }' | sed 's/,//g'
+uptime | awk ' { print $9 }' | sed 's/,//g'
+uptime | awk ' { print $8 }' | sed 's/,//g'
+sudo vi /etc/rsyslog.conf 
+sudo vi /etc/rsyslog.d/myiti.conf
+more /etc/rsyslog.conf 
+fg
+sudo systemctl restart rsyslog
+clear
+logger -p local7.info "welcome SA to BASH"
+sudo tail /var/log/itisystemload 
+sudo vi /etc/rsyslog.d/myiti.conf
+ps -ef|grep rsys
+sudo systemctl status rsyslog
+clear
+ls -l
+mkdir day2
+cd day2
+vi loop1.sh
+chmod a+x loop1.sh 
+./loop1.sh 
+vi loop1.sh 
+./loop1.sh 
+fg
+./loop1.sh 
+fg
+./loop1.sh 
+vi loop1.sh 
+clear
+./loop1.sh 
+fdg
+fg
+./loop1.sh 
+fg
+./loop1.sh 
+fg
+clear
+vi sumofrange
+vi sumofrange.sh
+chmod a+x sumofrange.sh 
+./sumofrange.sh 
+./sumofrange.sh 123
+./sumofrange.sh asd 123
+./sumofrange.sh 123 3d
+./sumofrange.sh 5 1
+./sumofrange.sh 1 5
+fg
+clear
+vi iticat.sh
+cl4ear
+clear
+file /etc/hosts
+file /usr/bin/ls
+fg
+chmod a+x iticat.sh 
+clear
+./iticat.sh /etc/passwd
+fg
+vi iticat.sh 
+./iticat.sh /etc/passwd
+clear
+./iticat.sh 
+echo ${?}
+./iticat.sh /etc/shadow
+echo ${?}
+./iticat.sh /etc/shado
+echo ${?}
+./iticat.sh /usr/sbin/lshw 
+fg
+clear
+read XYZ
+fg
+read ADATA
+read ADATA < /etc/hosts
+echo $DATA
+cat /etc/hosts
+echo $ADATA
+fg
+clear
+ls -
+ls -l
+vi iticat.sh 
+./iticat.sh /etc/group
+fg
+clear
+vi calc.sh
+clear
+echo "+" | grep -c "+-\*"
+echo "+" | grep -c "\+-\*"
+echo "+" | grep -c "\+\-\*"
+echo "\+" | grep -c "\+\-\*"
+echo "+" | grep -c "^\+\-\*$"
+echo "-" | grep -c "^\+\-\*$"
+echo "-" | grep -c "-"
+echo "-" | grep -c "^-$"
+echo "-" | grep -c "^[-+*/]$"
+echo "_" | grep -c "^[-+*/]$"
+echo "+" | grep -c "^[-+*/]$"
+clear
+echo "*" | grep -c "^[-+*/]$"
+echo "**" | grep -c "^[-+*/]$"
+echo "**" | grep -c "^[-+*/%]$"
+echo "*" | grep -c "^[-+*/%]$"
+echo "*" | grep -c "^[-+*/%]"
+echo "****" | grep -c "^[-+*/%]"
+echo "****" | grep -c "^[-+*/%]$"
+echo "****" | grep -c "^[-+*/%]{\1:\2}$"
+echo "****" | grep -c "^[-+*/%]{1:2}$"
+echo "**" | grep -c "^[-+*/%]{1:2}$"
+echo "**" | grep -c "^[-+*/%]{\1:\2}$"
+echo "**" | grep -c "^[-+*/%]{\1,\2}$"
+echo "**" | grep -c "^[-+*/%]{1,2}$"
+echo "**" | grep -c "^[-+*/%]\{1,2\}$"
+clear
+echo "**" | egrep -c "(^[-+/%]$|*\{1,2\})"
+echo "**" | egrep -c "^([-+/%]$|*\{1,2\})$"
+echo "+" | egrep -c "^([-+/%]$|*\{1,2\})$"
+echo "+" | egrep -c "^([-+/%]$|\*\{1,2\})$"
+echo "++" | egrep -c "^([-+/%]$|\*\{1,2\})$"
+echo "*" | egrep -c "^([-+/%]$|\*\{1,2\})$"
+echo "*" | egrep -c "^([-+/%]$|[*]\{1,2\})$"
+echo "*" | egrep -c "^([-+/%]$|[\*]\{1,2\})$"
+echo "*" | egrep -c "^([-+/%]$|[\*])$"
+echo "*" | egrep -c "^([-+/%]$|[*])$"
+echo "*" | egrep -c "^([-+/%]$|[*]\{1,2\})$"
+echo "*" | egrep -c "^([-+/%]$|([*]\{1,2\}))$"
+echo "*" | egrep -c "^([-+/%]$|([*]+))$"
+echo "**" | egrep -c "^([-+/%]$|([*]+))$"
+clear
+echo "**" | egrep -c "^([-+/%]|([*]+))$"
+echo "**" | egrep -c "^([-+/%]|([*]\{1,2\}))$"
+echo "**" | egrep -c "^([-+/%]|[*]+)$"
+echo "***" | egrep -c "^([-+/%]|([*]+))$"
+echo "***" | egrep -c "^([-+/%]|[*]{1,2})$"
+echo "***" | egrep -c "^([-+/%]|[*]\{1,2\})$"
+echo "***" | grep -Ec "^([-+/%]|[*]\{1,2\})$"
+echo "***" | grep -Ec "^([-+/%]|*\{1,2\})$"
+echo "***" | grep -Ec "^([-+/%]|[*]\{1,2\})$"
+echo "***" | grep -Ec "^([-+/%]|[*]|[**])$"
+echo "**" | grep -Ec "^([-+/%]|[*]|[**])$"
+echo "*" | grep -Ec "^([-+/%]|[*]|[**])$"
+echo "*" | grep -Ec "^([-+/%]|[*]|[\*\*])$"
+echo "**" | grep -Ec "^([-+/%]|[*]|[\*\*])$"
+clear
+echo "**" | grep -Ec "^([-+/%]|[*]|**)$"
+echo "**" | grep -Ec "^([-+/%]|[*]|(**))$"
+echo "**" | grep -Ec "^([-+/%]|[*]|**)$"
+echo "**" | grep -Ec "^([-+/%]|[*]|[*]{,2})$"
+echo "*" | grep -Ec "^([-+/%]|[*]|[*]{,2})$"
+echo "***" | grep -Ec "^([-+/%]|[*]|[*]{,2})$"
+echo "*" | grep -Ec "^([-+/%]|[*]|[*]{,2})$"
+fg
+more /etc/passwd
+cp /etc/passwd .
+vi passwd 
+grep "::" passwd 
+clear
+grep "^[.]*:x:[0-9]*:[0-9]*::" passwd 
+grep "[.]*:x:[0-9]*:[0-9]*::" passwd 
+0-9]
+\
+vi math.sh
+vi calc.sh 
+vi subnetscanner.sh
+ip a
+g
+fg
+clear
+ping 1.2.3.4
+ping -c 1 1.2.3.4
+echo ${?}
+ping -c 1 127.0.0.1
+echo ${?}
+fg
+clear
+chmod  a+x subnetscanner.sh 
+./subnetscanner.sh 
+kill %1
+fg
+vi subnetscanner.sh 
+ip r
+fg
+./subnetscanner.sh 
+kill %1
+fg
+kill %!
+kill %1
+jobs
+kill %2
+fg
+vi sub
+vi subnetscanner.sh 
+fg
+./subnetscanner.sh 
+fg
+./subnetscanner.sh 
+fg
+clear
+./subnetscanner.sh 
+fg
+sudo yum install nmap
+./subnetscanner.sh 
+clear
+nmap localhost
+nmap 172.16.228.71
+ipr
+ip r
+nmap 172.16.1.250
+fg
+vi subnetscanner.sh 
+clear
+vi scope.sh
+cat /etc/passwd
+ls -l
+mkdir day3
+clear
+NAME="ahmed"
+echo "${NAME} at ${HOME}"
+echo '${NAME} at ${HOME}'
+cat /etc/passwd
+clear
+TEXT="adm"
+sed -n "/adm/p" /etc/psa
+sed -n "/adm/p" /etc/passwd
+sed -n "/${TEXT}/p" /etc/passwd
+sed -n '/${TEXT}/p' /etc/passwd
+  echo "today is `date`"
+  echo "today is $(date)"
+clear
+cd day3/
+vi utils.sh
+tar zcf ~/iitsa.tar.gz /etc/passwd /etc/group
+sudo yum install tar
+clear
+tar zcf ~/iitsa.tar.gz /etc/passwd /etc/group
+ls -l ~/
+fok ~/itisa.tar.gz
+fok ~/iitsa.tar.gz
+ls -l
+source utils.sh 
+clear
+fok ~/iitsa.tar.gz 
+ls -l
+edghat etc/ /tmp/data.tar.gz
+ls -l /tmp/data.tar.gz 
+vi utils.sh 
+cleqr
+clear
+rm -Rf etc/
+fok ~/iitsa.tar.gz 
+rm -Rf etc/
+source utils.sh 
+fok ~/iitsa.tar.gz 
+mkdir libs
+cd libs/
+vi checkers.sh
+cat ../../day2/calc.sh 
+more ../../day2/calc.sh 
+fg
+source checkers.sh 
+vi checkers.sh 
+source checkers.sh 
+clear
+checkEmail ahmed.com
+echo ${?}
+checkEmail ahmed@ahmed.com
+echo ${?}
+cat checkers.sh 
+clear\
+clear
+echo "ahmed@ahmed.com" | grep -Ec "[.]*\@[.]*\.(com|org|net|tv|edu|eg)$"
+echo "ahmed@ahmed.com" | grep -Ec ".*\@[.]*\.(com|org|net|tv|edu|eg)$"
+echo "ahmed@ahmed.com" | grep -Ec ".*@[.]*\.(com|org|net|tv|edu|eg)$"
+echo "ahmed@ahmed.com" | grep -Ec ".*@[.]*.(com|org|net|tv|edu|eg)$"
+echo "ahmed@ahmed.com" | grep -Ec ".*$"
+echo "ahmed@ahmed.com" | grep -Ec ".*@$"
+echo "ahmed@ahmed.com" | grep -Ec ".*\@$"
+echo "ahmed@ahmed.com" | grep -Ec ".*[@]$"
+echo "ahmed@ahmed.com" | grep -Ec ".*[\@]$"
+echo "ahmed@ahmed.com" | grep -Ec ".*@@$"
+echo "ahmed@ahmed.com" | grep -Ec "[.]*@@$"
+echo "ahmed@ahmed.com" | grep -Ec "[.]*@$"
+echo "ahmed@ahmed.com" | grep -Ec '[.]*@$'
+clear
+echo "ahmed@ahmed.com" | grep -Ec "[.]*\@"
+echo "ahmed@ahmed.com" | grep -Ec "[.]*\@[.]*"
+echo "ahmed@ahmed.com" | grep -Ec "[.]*\@[.]*$"
+echo "ahmed@ahmed.com" | grep -Ec "[.]*\@[.]*"
+echo "ahmed@ahmed.com" | grep -Ec "[.]*\@[.]*\.[.]*"
+echo "ahmed@ahmed.com" | grep -Ec "[.]*\@[.]*.[.]*"
+echo "ahmed@ahmedvcom" | grep -Ec "[.]*\@[.]*.[.]*"
+echo "ahmed@ahmed.com" | grep -Ec "[.]*\@[.]*\."
+echo "ahmed@ahmed.com" | grep -Ec "[.]*\@[.]*\\."
+echo "ahmed@ahmed.com" | grep -Ec '[.]*\@[.]*\.'
+echo "ahmed@ahmed." | grep -Ec "[.]*\@[.]*\."
+echo "ahmed@ahmed" | grep -Ec "[.]*\@[.]*\."
+clear
+echo "ahmed@ahmed.com" | grep -Ec "[.]*\@.*\."
+echo "ahmed@ahmed.com" | grep -Ec "[.]*\@.*\..*"
+echo "ahmed@ahmedcom" | grep -Ec "[.]*\@.*\..*"
+echo "ahmed@ahmedcom" | grep -Ec "[.]*\@.*\..*$"
+echo "ahmed@ahmed.com" | grep -Ec "[.]*\@.*\..*$"
+echo "ahmed@ahmed.com" | grep -Ec "[.]*\@.*\.(com|net)$"
+echo "ahmed@ahmed.edu" | grep -Ec "[.]*\@.*\.(com|net)$"
+echo "ahmed@ahmed.edu" | grep -Ec "[.]*\@.*\.(com|net|edu|tv|info|global|org)$"
+echo "ahmed@ahmed.edu" | grep -Ec ".*\@.*\.(com|net|edu|tv|info|global|org)$"
+echo "ahmed@.edu" | grep -Ec ".*\@.*\.(com|net|edu|tv|info|global|org)$"
+echo "ahmed@.edu" | grep -Ec ".*\@.+\.(com|net|edu|tv|info|global|org)$"
+echo "ahmed@ahmed.edu" | grep -Ec ".*\@.+\.(com|net|edu|tv|info|global|org)$"
+echo "ahmed@ahmed.edu" | grep -Ec ".+\@.+\.(com|net|edu|tv|info|global|org)$"
+clear
+fg
+vi checkers.sh 
+ls -l
+fg
+vi fileutils.sh
+ls -l
+cd .
+cd ..
+ls -l
+rm utils.sh 
+vi mainscript.sh
+ls -l libs/
+fg
+vi config.sh
+fg
+ls -l
+vi mainscript.sh 
+fg
+chmod a+x mainscript.sh 
+./mainscript.sh 
+fg
+vi mainscript.sh 
+clear
+./mainscript.sh 
+fg
+./mainscript.sh 
+fg
+./mainscript.sh 
+fg
+vi mainscript.sh 
+clear
+./mainscript.sh 
+fg
+vi mainscript.sh 
+clear
+./mainscript.sh 
+fg
+vi mainscript.sh 
+./mainscript.sh 
+fg
+./mainscript.sh 
+fg
+vi mainscript.sh 
+./mainscript.sh 
+fg
+clear
+./mainscript.sh 
+fg
+more libs/checkers.sh 
+vi libs/checkers.sh 
+./mainscript.sh 
+fg
+cat libs/fileutils.sh 
+fg
+clear
+./mainscript.sh 
+vi mainscript.sh 
+fg
+vi mainscript.sh 
+./mainscript.sh 
+fg
+./mainscript.sh 
+fg
+./mainscript.sh 
+touch employee
+./mainscript.sh 
+cat employee 
+fg
+./mainscript.sh 
+vi employee 
+./mainscript.sh 
+fg
+more libs/checkers.sh 
+fg
+vi libs/checkers.sh 
+fg
+vi mainscript.sh 
+clear
+./mainscript.sh 
+fg
+vi libs/checkers.sh 
+clear
+echo "100.1" | grep -c "^[0-9]*.?[0-9]*$"
+echo "100.1" | grep -c "^[0-9]*\.?[0-9]*$"
+echo "100.1" | grep -c "^[0-9]*\.[0-9]*$"
+echo "100.1" | grep -c "^[0-9]+\.[0-9]+$"
+echo "100.1" | grep -Ec "^[0-9]+\.[0-9]+$"
+echo "100" | grep -Ec "^[0-9]+\.[0-9]+$"
+echo "100" | grep -Ec "^[0-9]+\[.]?[0-9]+$"
+echo "100" | grep -Ec "^[0-9]+\.[0-9]+$"
+echo "100" | grep -Ec "^[0-9]+\.{0,1}[0-9]+$"
+echo "100.123" | grep -Ec "^[0-9]+\.{0,1}[0-9]+$"
+fg
+clear
+./mainscript.sh 
+cat employee 
+./mainscript.sh 
+cat employee 
+vi mainscript.sh 
+fg
+vi employee 
+./mainscript.sh 
+cat employee 
+fg
+./mainscript.sh 
+vi data
+./mainscript.sh < data 
+fg
+cat employee 
+cat data 
+rm data 
+ls -l
+clear
+rm -Rf etc/
+ls -l
+cat employee 
+ls -l
+fg
+clear
+./mainscript.sh 
+vi data
+./mainscript.sh < data 
+cat employee 
+vi mainscript.sh 
+clear
+./mainscript.sh 
+fg
+vi mainscript.sh 
+cp mainscript.sh libs/dbops.sh
+vi libs/dbops.sh 
+vi mainscript.sh 
+clear
+cat employee 
+grep -n 11 employee 
+grep -n 11 employee | cut -d: -f 1
+sed -n '7d' employee
+sed  '7d' employee
+clear
+grep -n 1 employee | cut -d: -f 1
+grep -n 1 employee 
+grep -n ^1: employee 
+fg
+clear
+./mainscript.sh 
+fg
+vi mainscript.sh 
+clear
+mv employee employee-old
+./mainscript.sh 
+mv employee-old  employee
+ls -l
+fg
+vi mainscript.sh 
+ls -la

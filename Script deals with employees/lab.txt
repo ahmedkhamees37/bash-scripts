@@ -1,0 +1,3 @@
+Shell script accept 3 IPs (2 backends, and 1 frontend), install apache on backend servers, nginx on the frontend, configure nginx for load balancing (configure also firewalls, and selinux). The script automatically install, and configure the environment. 
+	once, the script has been started, no need to ask for anything (password, confirmation, and so on)
+
